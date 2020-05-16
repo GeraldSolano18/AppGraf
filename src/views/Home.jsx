@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../assets/styles/App.scss'
 import Nav from '../components/Navbar'
 
-const App = () => {
+const Home = () => {
 
     return (
-<div>
-    
-</div>
+        <div>
+    <Nav/>
+
+        </div>
+        
     );
 }
-export default App
+export default Home

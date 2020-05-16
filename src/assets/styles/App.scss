@@ -1,4 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap");
+@import "./Vars.scss";
+
 body{
     margin:0;
-    background-color: red;
+    font-family: "Open Sans", sans-serif;
+}
+p {
+  margin: 0;
+}
+li {
+  list-style: none;
 }

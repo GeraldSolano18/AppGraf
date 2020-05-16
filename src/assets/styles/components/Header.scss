@@ -1,0 +1,47 @@
+@import '../Vars.scss';
+
+.Header{
+    background-color: $COLOR_PRINCIPAL;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.header__img{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+
+}
+.fondo{
+    width: 100%
+}
+
+.Domi__Text{
+    font-family: $FUENTE_DOMI;
+    font-size: 40px;
+    color: $COLOR_NEGRO;
+    margin: 0;
+}
+
+.Header__menu li {
+    display:inline-flex;
+    margin-left:15px;
+    margin-right:10px;
+    background-color:rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+}
+.Link{
+    list-style: none;
+    color: $COLOR_NEGRO;
+    text-decoration:none;
+}
+.fondo-blanco{
+    width: 100%;
+   
+}
+
