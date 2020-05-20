@@ -1,0 +1,44 @@
+@import "../Vars.scss";
+
+.SideBar {
+  width: 80px;
+  height: 100vh;
+  background-color: $COLOR_NEGRO;
+  margin: 0;
+  position: absolute;
+}
+
+.SideBar_Icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.SideBar_P {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-top: 5px;
+
+}
+.SideBar_box{
+    margin-top: 40px;
+}
+
+.SideBar_box:hover{
+    background-color: $COLOR_TRANSPARENT;
+    cursor: pointer;
+
+}
+.SidebarDomi{
+  height: 100px;
+
+}
+.SidebarLogo{
+height: 80px;
+width: 80px;
+
+}

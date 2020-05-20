@@ -1,0 +1,35 @@
+@import '../Vars.scss';
+
+.pruebaGrid{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "sidebar contenedorhm"
+                     
+}
+.nie{
+    // display: inline-flex;
+    // align-items: center;
+    // justify-content: center;
+    grid-area: nie;
+}
+.evalua{
+    font-size: 25px;
+    color:  $COLOR_PRINCIPAL;
+    text-align: center;
+  }
+.sidebar{
+grid-area: sidebar ;
+}
+.contenedorhm{
+grid-area: contenedorhm;
+}
+.letras{
+    color: $COLOR_NEGRO;
+        font-family: $FUENTE_DOMI;
+        font-size: 30px;
+        text-align: center;
+        margin-left: 20px;
+        position: relative;
+        top:20px
+}

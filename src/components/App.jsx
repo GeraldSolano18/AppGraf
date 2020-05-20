@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import '../assets/styles/App.scss'
-import Nav from '../components/Navbar'
+
+import React from 'react';
+import '../assets/styles/App.scss';
 
 const App = () => {
 
-    return (
-<div>
-    
-</div>
-    );
-}
-export default App
+  return (
+    <div />
+  );
+};
+export default App;

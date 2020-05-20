@@ -1,0 +1,87 @@
+@import '../Vars.scss';
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@keyframes show {
+  0% {
+    z-index: 1;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 1;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animaShow {
+  animation: 2000ms show linear;
+  animation-fill-mode: forwards;
+}
+.animaHide {
+  animation: 2000ms hide linear;
+  animation-fill-mode: forwards;
+}
+
+.Slide {
+  width: 100%;
+  height: 91vh;
+  background: $COLOR_NEGRO;
+  color: #fff;
+  
+}
+
+.Slide_container {
+  height: 91vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+
+.Slide_container_img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.Slide_container_titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: absolute;
+  bottom: 200px;
+  color: $COLOR_PRINCIPAL;
+  z-index: 50;
+  width: 900px;
+  line-height: 6;
+
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+  border-radius: 10px;
+
+}
+
+.Slide_container_Domi{
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+top: 120px;
+}
+.Slider_prueba{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

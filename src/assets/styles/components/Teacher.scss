@@ -1,0 +1,72 @@
+@import '../Vars.scss';
+
+.cartHome{
+    padding: 5px;
+    width: 250px;
+    height: 250px;
+    background-color:rgba(58, 58, 58, 0.582);//variable
+    border-radius: 0.2em;
+    box-shadow: $BOX_SHADOW; //varriable
+    font-size: 15px;
+    color: $COLOR_NEGRO;
+    display: block;
+    margin: auto;
+    margin-left: 20px;
+
+}
+.btn_Modal{
+    width: 30px;
+    height: 30px;
+}
+.con_btn{
+    display: inline-flex;
+
+}
+.cartP{
+font-family: $FUENTE_MONSE;
+text-align: center;
+color: $COLOR_PRINCIPAL;
+font-size: 20px;
+
+}
+.cartContenido{
+font-family: $FUENTE_MONSE;
+text-align: center;
+color: $COLOR_PRINCIPAL;
+font-size: 15px;
+}
+
+.cartIcon{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+display: block;
+margin: auto;
+
+}
+
+.cartButton{
+    padding:5px ;
+    display: flex;
+    align-items: flex-end;
+    background: none;
+    border: none;
+    margin-left: 20px;
+    
+}
+.carousel-item {
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+  }
+
+  .infoGroup{
+    text-align: center;
+  }

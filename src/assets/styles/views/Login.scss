@@ -1,0 +1,100 @@
+@import "../Vars.scss";
+
+
+.img-log {
+  width: 50px;
+  margin-left: 20px;
+ 
+}
+.particles{
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+}
+.fotoxx{
+  width: 100%;
+  height: 680px;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+}
+
+.login {
+  border-radius: 8px;
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  display:block ;
+  margin: auto;
+}
+
+ 
+.logo1 {
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  position: relative;
+
+}
+
+.appg {
+  color: $COLOR_NEGRO;
+  font-family: $FUENTE_DOMI;
+  font-size: 50px;
+  text-align: center;
+}
+.textlog {
+  color: $COLOR_NEGRO;
+  font-family: $FUENTE_MONSE;
+  font-size: 30px;
+  text-align: center;
+}
+.text-co {
+  color: $COLOR_NEGRO;
+  font-family: $FUENTE_MONSE;
+  font-size: 30px;
+text-align: center;
+}
+.up {
+  font-size: 30px;
+  color: $COLOR_NEGRO;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.prueba {
+  font-size: 20px;
+  height: 30px;
+  width: 280px;
+  border-radius: 3px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+// .prueba2 {
+//   font-size: 20px;
+//   height: 30px;
+//   width: 280px;
+//   border-radius: 3px;
+//   background-color: $ColorGrey;
+//   position: relative;
+//   left: 100px;
+//   top: 80px;
+// }
+// .ingresar {
+//   cursor: pointer;
+//   height: 40px;
+//   width: 250px;
+//   border-radius: 15px;
+//   font-family: $Tipo2;
+//   font-size: 22px;
+//   color: $ColorWhite;
+//   background-color: $ColorPrincipal;
+//   position: relative;
+//   left: 120px;
+//   top: 130px;
+// }

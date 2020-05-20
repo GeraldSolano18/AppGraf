@@ -1,7 +1,7 @@
 @import '../Vars.scss';
 
-.Header{
-    background-color: $COLOR_PRINCIPAL;
+.header{
+    background-color: $COLOR_NEGRO;
     width: 100%;
     height: 60px;
     top: 0px;
@@ -10,6 +10,22 @@
     justify-content: space-between;
     position: relative;
 }
+.let {
+     color:rgb(255, 255, 255);
+    font-family: $FUENTE_DOMI;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    position: relative;
+    top:10px;
+  }
+  .gorrob{
+      width: 50px;
+  }
+  .nnn{
+      display: inline-flex;
+      margin-left: 20px;
+  }
 .header__img{
     width: 60px;
     height: 60px;
@@ -31,7 +47,7 @@
     display:inline-flex;
     margin-left:15px;
     margin-right:10px;
-    background-color:rgba(255, 255, 255, 0.3);
+    background-color:rgba(255, 255, 255, 0.753);
     padding: 5px;
     border-radius: 5px;
 }
@@ -45,3 +61,13 @@
    
 }
 
+.login-dash {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }

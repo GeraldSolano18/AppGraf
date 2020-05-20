@@ -1,33 +1,47 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
 import { Link } from 'react-router-dom';
+import log from '../assets/static/gorroB.svg';
 
-
-const Navbar = () => {
+const Navbar = (location) => {
   return (
 
-    <div className='Header'>
-      <div>
+    <header className={
+      location.pathname === "/dashboard" ?
+        "login-dash" :
+        "header"
+    }
+    >
+
+      <div className='header'>
+        <div>
+          <Link to='/' className='Link'>
+            <div className='nnn'>
+              <img src={log} alt='' className='gorrob' />
+              <p className='let'>AppGraf</p>
+            </div>
+
+          </Link>
+        </div>
+
+        <div className='Header__menu'>
+          <ul>
+            <li>
+              <Link to='/login' className='Link'>
+                Inicio de sesion
+              </Link>
+            </li>
+            <li>
+              <Link to='/register' className='Link'>
+                Registrarse
+              </Link>
+
+            </li>
+          </ul>
+        </div>
 
       </div>
-      <div className='Header__menu'>
-        <ul>
-          <li>
-            <Link to='/sobreRedStore' className='Link'>
-              Inicio de sesion
-            </Link>
-          </li>
-          <li>
-            <Link to='/comercios' className='Link'>
-              Registrarse
-            </Link>
-
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
+    </header>
   );
 };
 
