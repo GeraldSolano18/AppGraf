@@ -1,42 +1,71 @@
 import React from 'react';
-import '../assets/styles/components/Header.scss';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import gravatar from '../utils/gravatar';
+import { logoutRequest } from '../redux/actions/LoginOutAction';
+import '../assets/styles/components/Header.scss';
 import log from '../assets/static/gorroB.svg';
+import usericon from '../assets/static/user-icon.png';
 
-const Navbar = (location) => {
+const Navbar = (props) => {
+  const { user, location } = props;
+  const hasUser = Object.keys(user).length > 0;
+
+  const handleLogout = () => {
+    props.logoutRequest({});
+  };
   return (
-
     <header className={
-      location.pathname === "/dashboard" ?
-        "login-dash" :
-        "header"
+      location.pathname === '/dashboard' ?
+        'header' :
+        'header'
     }
     >
 
-      <div className='header'>
-        <div>
-          <Link to='/' className='Link'>
-            <div className='nnn'>
-              <img src={log} alt='' className='gorrob' />
-              <p className='let'>AppGraf</p>
-            </div>
+      <div>
+        <Link to='/' className='Link'>
+          <div className='nnn'>
+            <img src={log} alt='' className='gorrob' />
+            <p className='let'>AppGraf</p>
+          </div>
 
-          </Link>
+        </Link>
+      </div>
+
+      <div className='Header__menu'>
+        <div className='gridxx'>
+          <div className='header__menu--profile'>
+            {
+              hasUser ?
+                <img src={gravatar(user.email)} alt={user.email} className=' icon gravatar_icon' /> :
+                <img src={usericon} alt='Hola' className='icon' />
+            }
+          </div>
         </div>
-
-        <div className='Header__menu'>
+        <div>
           <ul>
-            <li>
-              <Link to='/login' className='Link'>
-                Inicio de sesion
-              </Link>
-            </li>
-            <li>
-              <Link to='/register' className='Link'>
-                Registrarse
-              </Link>
+            {
+              hasUser ? (
+                <li className='imp'>
+                  <a href='/' onClick={handleLogout}>Cerrar sesion</a>
+                </li>
+              ) :
+                (
+                  <div>
+                    <li className='imp'>
+                      <Link to='/login' className='Link'>
+                        Inicio de sesion
+                      </Link>
+                    </li>
+                    <li className='imp'>
+                      <Link to='/register' className='Link'>
+                        Registrarse
+                      </Link>
+                    </li>
+                  </div>
+                )
+            }
 
-            </li>
           </ul>
         </div>
 
@@ -44,5 +73,14 @@ const Navbar = (location) => {
     </header>
   );
 };
-
-export default Navbar;
+//trae del estado el elemento user que viene de state.user
+const mapStateToProps = (state) => {
+  return {
+    user: state.LoginOut.user,
+  };
+};
+//las acciones que se disparan
+const mapDispatchToProps = {
+  logoutRequest,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

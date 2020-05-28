@@ -1,53 +1,56 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
+import { connect } from 'react-redux';
+import '../assets/styles/views/Dashboard.scss';
+
 import SideBar from '../components/SideBar';
 import Car from "./Car";
 import Teacher from '../components/Teacher';
-import '../assets/styles/views/Dashboard.scss';
-import log from '../assets/static/gorron.svg';
+import Dashh1 from '../components/Dashh1';
+import Estudiante from '../components/Estudiante/Estudiante';
 
-const Dashboard = () => {
-  const [teachers, setTeachers] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/initalState')
-      .then((response) => response.json())
-      .then((data) => setTeachers(data));
-  }, []);
-  console.log(teachers);
+const Dashboard = (props) => {
+  const { user, Profesores } = props;
+  const hasUser = Object.keys(user).length > 0;
   return (
-
-    <div>
+    <>
       <div className='pruebaGrid'>
-
         <div className='sidebar'>
           <SideBar />
         </div>
 
-        {/* <div className='contenedormenu'>
-          <DashMenu />
-        </div> */}
+        {hasUser && user.email === 'profe' ?
+          null : (
+            <div className='contenedorhm'>
+              <Dashh1 />
+            </div>
+          )}
 
-        <div className='contenedorhm'>
-          <div className='contacto'>
-            <img src={log} alt='' className='logo1' />
-            <p className='letras'>Maestros</p>
+        {hasUser && user.email === 'profe' ? (
+          <div className='teachers'>
+            <Estudiante />
           </div>
-          <div className='contacto'>
-            <p className='evalua'>¡Deja comentarios sobre tus maestros y evalua su desempeño! </p>
+        ) : (
+          <div className='teachers'>
+            <Fade>
+              <Car>
+                {Profesores.map((item) => <Teacher key={item.Id} {...item} />) }
+              </Car>
+            </Fade>
           </div>
+        )}
 
-          <Fade>
-            <Car>
-              {teachers.map((item) => <Teacher key={item.id} {...item} />) }
-            </Car>
-
-          </Fade>
-
-        </div>
       </div>
-    </div>
+
+    </>
   );
 };
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    Profesores: state.LoginOut.Profesores,
+    user: state.LoginOut.user,
+  };
+};
+
+export default connect(mapStateToProps, null)(Dashboard);

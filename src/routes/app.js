@@ -5,6 +5,7 @@ import Home from '../views/Home';
 import Login from '../views/Login';
 import Reg from '../views/Register';
 import Dash from '../views/Dashboard';
+import Graf from '../views/Graficos';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Reg} />
         <Route exact path='/dashboard' component={Dash} />
+        <Route exact path='/graficos' component={Graf} />
       </Switch>
     </Layout>
 

@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import { connect } from 'react-redux';
 import '../assets/styles/components/Teacher.scss';
+
 import star from '../assets/static/st.svg';
 import seen from '../assets/static/mirando.svg';
 
 Modal.setAppElement('#app');
 
-const Teacher = ({ Nombre, Apellido, Profesion, Icon, Puntaje, Popularidad, Comentarios }) => {
+const Teacher = (props) => {
+  const { Nombre, Apellido, Profesion, Icon, Puntaje, Popularidad, Comentarios } = props;
   const [modalIsOPen, setModalIsOPen] = useState(false);
 
   return (
@@ -103,5 +106,10 @@ const Teacher = ({ Nombre, Apellido, Profesion, Icon, Puntaje, Popularidad, Come
 
   );
 };
+const mapDispatchToProps = (state) => {
+  return {
+    Profesores: state.Profesores,
+  };
+};
 
-export default Teacher;
+export default connect(null, mapDispatchToProps)(Teacher);

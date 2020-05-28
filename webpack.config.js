@@ -1,14 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const autoprefixer = require('autoprefixer');
-//const webpack = require('webpack');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -21,9 +20,6 @@ module.exports = {
         enforce: 'pre',
         use: {
           loader: 'eslint-loader',
-          options: {
-            fix: true,
-          },
         },
       },
       {
@@ -61,14 +57,10 @@ module.exports = {
 
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
-    // new webpack.LoaderOptionsPlugin({
-    //   options: {
-    //     postcss: [
-    //       autoprefixer(),
-    //     ],
-    //   },
-    // }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',

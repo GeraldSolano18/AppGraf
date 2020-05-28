@@ -3,16 +3,12 @@
 .pruebaGrid{
     display: grid;
     grid-template-columns: 80px 1fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: "sidebar contenedorhm"
+    grid-template-rows: 120px 1fr;
+    grid-template-areas: "sidebar contenedorhm" 
+                         "sidebar teachers" 
                      
 }
-.nie{
-    // display: inline-flex;
-    // align-items: center;
-    // justify-content: center;
-    grid-area: nie;
-}
+
 .evalua{
     font-size: 25px;
     color:  $COLOR_PRINCIPAL;
@@ -23,6 +19,9 @@ grid-area: sidebar ;
 }
 .contenedorhm{
 grid-area: contenedorhm;
+}
+.teachers{
+    grid-area: teachers;
 }
 .letras{
     color: $COLOR_NEGRO;

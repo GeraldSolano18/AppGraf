@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Particles from "react-particles-js";
+import { connect } from 'react-redux';
+import { loginRequest } from '../redux/actions/LoginOutAction';
 //import Fade from 'react-reveal/Fade';
 
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import contacto from '../assets/static/contacto.jpg';
 import log from '../assets/static/gorron.svg';
 import '../assets/styles/views/Login.scss';
 
-const Login = () => {
+const Login = (props) => {
+
+  const [form, setValues] = useState({
+    email: '',
+  });
   const particleOPT = {
     particles: {
       number: {
@@ -42,6 +48,19 @@ const Login = () => {
       },
     },
   };
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+
+    });
+  };
+  const handeSubmit = (event) => {
+    event.preventDefault();
+    props.loginRequest(form);
+    props.history.push('/dashboard');
+  };
+
   return (
     <div>
       <div className='particles'>
@@ -53,25 +72,38 @@ const Login = () => {
         <div className='up'>
           <img src={log} className='logo1' alt='' />
           <p className='appg'>AppGraf</p>
-
         </div>
-        <div className='down'>
-          <p className='textlog'>Login</p>
-          <p className='text-co '>User</p>
-          <input type='text' className='prueba' />
-          <p className='text-co '>Password</p>
-          <input className='prueba' type='password' />
-          <button type='submit' className='sub'>
-            <Link to='/dashboard'>
+        <p className='textlog'>Login</p>
+        <form onSubmit={handeSubmit}>
+          <div className='down'>
+            <input
+              name='email'
+              type='text'
+              className='prueba'
+              placeholder='User'
+              onChange={handleInput}
+            />
+            <input
+              name='pass'
+              className='prueba'
+              type='password'
+              placeholder='pass'
+              onChange={handleInput}
+            />
+            <button type='submit' className='sub'>
+
               Enviar datos
-            </Link>
+            </button>
 
-          </button>
+          </div>
+        </form>
 
-        </div>
       </div>
 
     </div>
   );
 };
-export default Login;
+const mapDispatchToProps = {
+  loginRequest,
+};
+export default connect(null, mapDispatchToProps)(Login);

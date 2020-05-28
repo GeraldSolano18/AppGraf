@@ -42,10 +42,12 @@
     color: $COLOR_NEGRO;
     margin: 0;
 }
-
-.Header__menu li {
+.Header__menu{
+ display: inline-flex;
+    
+}
+.imp {
     display:inline-flex;
-    margin-left:15px;
     margin-right:10px;
     background-color:rgba(255, 255, 255, 0.753);
     padding: 5px;
@@ -60,14 +62,31 @@
     width: 100%;
    
 }
+.icon{
+    width: 50px;
+
+    
+}
+.gridxx{
+    display: grid;
+    grid-template-columns: repeat(1,80px); 
+    height:60px;
+}
 
 .login-dash {
-    background-color: white;
-    width: 100%;
-    height: 60px;
-    top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    background-color:yellow;
+    color: red;
   }
+  .header__menu--profile {
+    align-items: center;
+    display:inline-flex;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .gravatar_icon{
+    border-radius: 100%;
+    object-fit:cover ;//ajusta la imagen 
+    width: 50px;
+  }
+ 
