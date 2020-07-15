@@ -41,6 +41,7 @@ const initialState = {
       "Icon": "https://randomuser.me/api/portraits/men/61.jpg",
       "Comentarios": "Accounting",
     },
+
   ],
   "alumno": {
 

@@ -1,20 +1,12 @@
 @import "../Vars.scss";
 
-
 .img-log {
   width: 50px;
   margin-left: 20px;
- 
 }
-.particles{
+.fotoxx {
   width: 100%;
-  height: 100vh;
-  z-index: -1;
-  position: absolute;
-}
-.fotoxx{
-  width: 100%;
-  height: 680px;
+  height: 100%;
   position: absolute;
   z-index: -2;
   left: 0;
@@ -26,17 +18,17 @@
   height: 400px;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 1;
-  display:block ;
   margin: auto;
+  position: relative;
+  top:50px;
+
 }
 
- 
 .logo1 {
   height: 100px;
   width: 100px;
   margin: 0;
   position: relative;
-
 }
 
 .appg {
@@ -55,7 +47,7 @@
   color: $COLOR_NEGRO;
   font-family: $FUENTE_MONSE;
   font-size: 30px;
-text-align: center;
+  text-align: center;
 }
 .up {
   font-size: 30px;
@@ -63,17 +55,19 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .prueba {
-  font-size: 20px;
-  height: 30px;
-  width: 280px;
-  border-radius: 3px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-
+  outline: none;
+  height: 40px;
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
 }
 // .prueba2 {
 //   font-size: 20px;

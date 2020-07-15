@@ -9,8 +9,8 @@ import usericon from '../assets/static/user-icon.png';
 
 const Navbar = (props) => {
   const { user, location } = props;
+  //esto guarda true si hay algun valor en el object del store
   const hasUser = Object.keys(user).length > 0;
-
   const handleLogout = () => {
     props.logoutRequest({});
   };

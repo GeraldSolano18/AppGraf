@@ -2,9 +2,9 @@
 @import "./Vars.scss";
 //@import  "~bootstrap/scss/bootstrap";
 
-body{
-    margin:0;
-    font-family: "Open Sans", sans-serif;
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 p {
   margin: 0;
@@ -12,3 +12,24 @@ p {
 li {
   list-style: none;
 }
+
+///////////////////HOME /////////////////////////////////
+
+.container_home {
+  width: 100%;
+  position: relative;
+}
+.container_title_absolute {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 120px;
+  color: $COLOR_PRINCIPAL;
+  font-size: 25px;
+}
+.cubos_banner {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: center;
+}
+///////////////////////////////////////////////////////////

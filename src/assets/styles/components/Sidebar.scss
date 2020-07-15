@@ -1,44 +1,82 @@
 @import "../Vars.scss";
 
+//Estilos por defecto
 .SideBar {
   width: 80px;
   height: 100vh;
   background-color: $COLOR_NEGRO;
   margin: 0;
-  position: absolute;
+  position: fixed;
+  left: -80px;
+  animation: slide-open 0.5s forwards;
 }
+//Estilos cuando se cierra
+.SideBar_Close{
+  left: 0;
+  animation: slide-close 0.5s forwards;
+
+}
+
+
+
 
 .SideBar_Icon {
   width: 60px;
   height: 60px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .SideBar_P {
-  color: white;
+  color: red;
   font-size: 18px;
   text-align: center;
   margin: 0;
   margin-top: 5px;
-
 }
-.SideBar_box{
-    margin-top: 40px;
+.SideBar_box {
+  margin-top: 40px;
 }
 
-.SideBar_box:hover{
-    background-color: $COLOR_TRANSPARENT;
-    cursor: pointer;
-
+.SideBar_box:hover {
+  background-color: $COLOR_TRANSPARENT;
+  cursor: pointer;
 }
-.SidebarDomi{
+.SidebarDomi {
   height: 100px;
+}
+.SidebarLogo {
+  height: 80px;
+  width: 80px;
+}
+.OpenButton {
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
 
 }
-.SidebarLogo{
-height: 80px;
-width: 80px;
+.OpenImg {
+  width: 40px;
+}
 
+//ANIMACION SLIDE
+
+@keyframes slide-open {
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slide-close {
+  0% {
+    left: 80px;
+  }
+  100% {
+    left: -80px;
+  }
 }

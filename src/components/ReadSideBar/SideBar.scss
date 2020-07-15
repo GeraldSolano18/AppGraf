@@ -1,0 +1,62 @@
+.pruebaSlide {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+
+%replica_docker {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  width: 555px;
+  height: 440px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px 10px rgba(0, 0, 0, 0.17);
+}
+.openbox {
+  @extend %replica_docker;
+  animation: abierto 0.6s forwards;
+}
+.closebox {
+  @extend %replica_docker;
+  animation: cerrado 0.6s forwards;
+}
+
+.replica_blue {
+  cursor: pointer;
+  background-color: #0e65c9;
+  border-radius: 8px 0 0 8px;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  p {
+    transform: rotate(90deg);
+    margin-top: 25px;
+  }
+}
+.replica_wrapper {
+  padding: 30px;
+}
+.replica_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@keyframes abierto {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(505px);
+  }
+}
+@keyframes cerrado {
+  0% {
+    transform: translateX(505px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

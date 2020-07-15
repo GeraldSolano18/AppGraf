@@ -1,4 +1,4 @@
-@import '../Vars.scss';
+@import "../Vars.scss";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @keyframes show {
   0% {
@@ -37,7 +37,6 @@
   height: 91vh;
   background: $COLOR_NEGRO;
   color: #fff;
-  
 }
 
 .Slide_container {
@@ -56,9 +55,9 @@
 }
 
 .Slide_container_titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 200px;
   color: $COLOR_PRINCIPAL;
@@ -69,19 +68,17 @@
   text-shadow: 1px 1px black;
   font-size: 20px;
   border-radius: 10px;
-
 }
 
-.Slide_container_Domi{
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-top: 120px;
+.Slide_container_Domi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 120px;
 }
-.Slider_prueba{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.Slider_prueba {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

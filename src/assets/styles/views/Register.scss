@@ -1,12 +1,10 @@
 @import "../Vars.scss";
 
-
 .img-log {
   width: 100%;
   opacity: 0.6;
- 
 }
-.particles{
+.particles {
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -14,26 +12,46 @@
 }
 
 .containerwhite {
-  width: 1200px;
-  height: 600px;
+  width: 600px;
+  height: 800px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  top: 100px;
-left: 50px;
+    margin: auto;
+  position: relative;
+  top:50px;
 }
-.imgxx{
-  width: 50px;
-  margin-left: 10px;
+.buttons_container{
+  text-align: center;
+  button{
+    color:$COLOR_PRINCIPAL;
+    padding: 5px;
+    font-size: 20px;
+    background: #f0f3fa;
+    border: solid 1px $COLOR_PRINCIPAL;
+    border-radius: 8px;
+    margin: 5px;
+
+  }
 }
-.boxxx{
-  font-size: 20px;
-  height: 30px;
-  width: 280px;
-  border-radius: 3px;
-display: block;
-margin-left: auto;
-margin-right: auto;
+.imgxx {
+  width: 40px;
+  margin-right: 10px;
+}
+.boxxx {
+
+  height: 40px;
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px; 
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+
+
 }
 
 .hmx {
@@ -54,12 +72,11 @@ margin-right: auto;
 .contacto {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
-.ContainerBoss {
-  display: grid;
-  grid-template-columns: repeat(2, 600px);
-}
+// .ContainerBoss {
+//   display: grid;
+//   grid-template-columns: repeat(2, 600px);
+// }
 .sub {
   width: 300px;
   height: 40px;
@@ -74,9 +91,9 @@ margin-right: auto;
   margin-top: 20px;
   //font-family: $Tipo2;
   font-size: 18px;
-} 
+}
 .Datos {
-  font-size: 30px;
+  font-size: 25px;
   color: $COLOR_NEGRO;
   display: flex;
   justify-content: center;
@@ -84,23 +101,6 @@ margin-right: auto;
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.box {
-  width: 150px;
-  height: 30px;
-  border-radius: 3px;
-  display: block;
-  margin-left: 150px;
-  margin-right: auto;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 15px;
+::placeholder {
   color: $COLOR_PRINCIPAL;
 }
-.containerCheck {
-  margin-top: 10px;
-  text-align: center;
-
-}
-::placeholder { 
-    color: $COLOR_PRINCIPAL;
-  }

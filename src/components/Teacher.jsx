@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import '../assets/styles/components/Teacher.scss';
 
 import star from '../assets/static/st.svg';
-import seen from '../assets/static/mirando.svg';
+import seen from '../assets/static/vision.svg';
 
 Modal.setAppElement('#app');
 
@@ -17,32 +17,27 @@ const Teacher = (props) => {
   return (
     <>
       <Zoom>
-        <div className='carousel-item'>
-          <div className='carousel-item__details'>
-            <div className='cartHome'>
-              <img src={Icon} className='cartIcon' alt='' />
-              <p className='cartP'>{`${Nombre} ${Apellido} `}</p>
-              <div className='cartContenido'>
-                {Profesion}
-                <br />
-                <div className='con_btn'>
-                  <button
-                    onClick={() => setModalIsOPen(true)}
-                    type='button'
-                    className='cartButton'
-                  >
-                    <img src={seen} className='btn_Modal' alt='' />
-                  </button>
-                  <button
-                    onClick={() => setModalIsOPen(true)}
-                    type='button'
-                    className='cartButton'
-                  >
-                    <img src={star} className='btn_Modal' alt='' />
-                  </button>
-                </div>
-
-              </div>
+        <div className='cartHome'>
+          <img src={Icon} className='cartIcon' alt='' />
+          <p className='cartP'>{`${Nombre} ${Apellido} `}</p>
+          <div className='cartContenido'>
+            {Profesion}
+            <br />
+            <div className='con_btn'>
+              <button
+                onClick={() => setModalIsOPen(true)}
+                type='button'
+                className='cartButton'
+              >
+                <img src={seen} className='btn_Modal' alt='' />
+              </button>
+              <button
+                onClick={() => setModalIsOPen(true)}
+                type='button'
+                className='cartButton'
+              >
+                <img src={star} className='btn_Modal' alt='' />
+              </button>
             </div>
 
           </div>

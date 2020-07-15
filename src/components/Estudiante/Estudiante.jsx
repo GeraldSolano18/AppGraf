@@ -9,6 +9,7 @@ import Form from './Form';
 import { addStudent, updateStudent, deleteStudent } from '../../redux/actions/CstdAction';
 import { getId } from '../../utils/getId';
 import TableStd from './TableStd';
+
 import '../../assets/styles/components/Estudiantes.scss';
 
 const Estudiante = ({ estudiante, addStudent, updateStudent, deleteStudent }) => {
